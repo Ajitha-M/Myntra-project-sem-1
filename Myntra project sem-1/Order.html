@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="image\myntra-icon.png">
+  <title>Orders</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="styleSheet" type="text/css" href="style9.css">
+
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+</head>
+<style>
+    /* Profile */
+.card {
+  width: 300px;
+  height: 400px;
+  box-shadow: 5px 1px 1px 5px silver;
+  align-items: center;
+}
+
+.card hr {
+  width: 250px;
+}
+
+.profile a:hover {
+  border-bottom: 5px solid #ef4b4b;
+  width: 65px;
+}
+
+.profileCard {
+  display: none;
+}
+
+.profile:hover .profileCard {
+  display: block;
+  position: absolute;
+  top: 84px;
+  left: -80px;
+  margin-right: 20px;
+  background-color: white;
+  z-index: 1;
+}
+
+.list li a {
+  padding: 2px;
+  margin-left: 30px;
+}
+
+.button {
+  color: red;
+  font-weight: bold;
+}
+
+.button:hover {
+  color: red;
+  border: 1px solid red;
+  background-color: white;
+}
+
+/* Men Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  min-height: 500px;
+  min-width: 1300px;
+}
+
+.dropdown-content a {
+  color: black;
+  display: block;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  font-weight: bold;
+}
+
+.men .heading {
+  font-weight: bold;
+  color: #EF4B4B;
+  padding: 10px 0 10px 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown .men {
+  position: absolute;
+  left: -50px;
+  top: 70px;
+}
+
+.dropdown .women {
+  position: absolute;
+  left: -107px;
+  top: 70px;
+}
+
+.dropdown .kids {
+  position: absolute;
+  left: -184px;
+  top: 70px;
+}
+
+.dropdown .home {
+  position: absolute;
+  left: -243px;
+  top: 70px;
+}
+
+.dropdown .discover {
+  position: absolute;
+  left: -357px;
+  top: 70px;
+}
+
+.dropdown .even {
+  background-color: rgb(250, 251, 252);
+}
+
+nav li a:hover {
+  background-color: white;
+}
+.oldOrder
+{
+
+}
+.item
+  {
+    display: none;
+  }
+/* Orders */
+.order
+{
+  margin-top: 50px;
+}
+.order .card
+{
+  box-shadow: 0 0 4px rgba(40,44,63,0.08);
+  border: 1px solid #EAEAEC;
+  width: 700px;
+  height: 300px;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-right: 50px;
+}
+.order .right
+{
+      border-right: 1px solid #d4d5d9;
+}
+.order .card img
+{
+  margin: 5px;
+  height: 150px;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: none;
+}
+
+</style>
+
+<body>
+
+<div class="order">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2">
+
+
+      </div>
+      <div class="col-lg-8">
+        <div class="">
+          <h5><b style="font-size:15px;">Account</b></h5><br><h2 style="color:rgb(219, 33, 120)">Ajitha M</h2>
+
+        </div>
+        <hr>
+      </div>
+      <div class="col-lg-2">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2">
+
+      </div>
+      <div class="col-lg-2">
+        <div class="right">
+          <div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action"><b>Overview </b><hr></a>
+  <a href="#" class="list-group-item list-group-item-action"><b>Orders<b></a>
+  <a href="#" class="list-group-item list-group-item-action"><b style="color: rgb(28, 196, 50);">Order & Returns</b><hr></a><br>
+  <a href="#" class="list-group-item list-group-item-action disabled"><h6>CRIDTS</h6></a>
+    <a href="#" class="list-group-item list-group-item-action"><b>Coupons<b></a>
+      <a href="#" class="list-group-item list-group-item-action"><b>Myntra Credit<b></a>
+        <a href="#" class="list-group-item list-group-item-action"><b>Myntra Points<b><hr></a><br>
+        <a href="#" class="list-group-item list-group-item-action"><h6>ACCOUNT<h6></a>
+        <a href="#" class="list-group-item list-group-item-action"><b>Profile<b></a>
+        <a href="#" class="list-group-item list-group-item-action"><b>Saved Cards<b></a>
+        <a href="#" class="list-group-item list-group-item-action"><b>Addresses<b></a>
+        <a href="#" class="list-group-item list-group-item-action"> <b> Myntra Insider<b></a>
+
+
+</div>
+
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <span style="color:blue;">Placed On:</span>21 Nov 6371566288038183 <br><br>
+          <span style="color:blue;">Order No:</span> 53795065 <br><br>
+          <span style="color:red;">Price Details: MRP: 1175.00</span> </span> <br>
+          <span> <b>Total:  <i class="fa fa-inr" aria-hidden="true"></i>1175.00</b> </span> <br>
+        </div> <hr>
+        <div class="row">
+        <span  style="color:blue;">Updates sent to:</span><br><br>
+        9003424176<br><br>
+        ajitha71099@gmail.com <br><br>
+      </div> <hr>
+        <div class="row">
+          <span  style="color:rgb(40, 40, 156);">Shipping Address:</span><br><br>
+          <b>Ajitha M,</b> <br>
+          <p>Kalainager, <br>Nagercoil-629002.</p>
+        </div>
+
+        <div class="row">
+          <h3 style="color:rgb(113, 160, 248);" align="center"><b>ITEMS IN THIS ORDER</b></h3>
+        <div class="card">
+          <div class="card-text">
+            <b style="color: red;">DELEVERED</b><b> Order No:53795065</b> <br>
+              Placed on Saturday, November 21,2020 / Rs. 1,000 / 1 items <hr>
+          </div>
+          <div class="card-body">
+            <b>Shipment 1 : 1 item | Delivered on Wednesday, December 25, 2019 <span style="float:right;"> <a href="list.html">View Details</a> </span> </b><br>
+          </div>
+          <img src="/Task12/images/e14cfd70-8d09-487e-b742-ed70210f29641604137765740-panchhi-Women-Lehenga-Choli-3501604137763277-1.webp" class="image-base-imgResponsive" alt="image" >
+        </div>
+      </div>
+
+       <div class="row">
+          
+        <div class="card">
+          <div class="card-text">
+            <b style="color: red;">DELEVERED</b><b> Order No:5754794765</b> <br>
+              Placed on Saturday, January 29,2021 / Rs. 1,450 / 1 items <hr>
+          </div>
+          <div class="card-body">
+            <b>Shipment 1 : 2 item | Delivered on Monday, January 31, 2021 <span style="float:right;"> <a href="list.html">View Details</a> </span> </b><br>
+          </div>
+          <img src="/Task12/images/36d040c6-0ff0-4e96-b075-b82ad90795ff1583538711824-1.webp" class="image-base-imgResponsive" alt="image" >
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-2">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+   
+
+  </body>
+
+  </html>

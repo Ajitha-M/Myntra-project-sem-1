@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="image\myntra-icon.png">
+  <title>Orders</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="styleSheet" type="text/css" href="stylesheet\style.css">
+
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+
+<style>
+  .oldOrder
+ {
+ 
+ } 
+ .item
+   {
+     display: none;
+   }
+  
+/* Slick */
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: 1;
+  }
+  .slider
+  {
+    display: none;
+  }
+  
+  .slider img
+  {
+    height: 280px;
+    width: 210px;
+  }
+  /* Orders */
+  .order
+  {
+    margin-top: 50px;
+  }
+  .order .card
+  {
+    box-shadow: 0 0 4px rgba(40,44,63,0.08);
+    border: 1px solid #EAEAEC;
+    width: 700px;
+    height: 300px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-right: 50px;
+  }
+  .order .right
+  {
+        border-right: 1px solid #d4d5d9;
+  }
+  .order .card img
+  {
+    margin: 5px;
+    height: 150px;
+  }
+  .list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: none;
+  }
+  .details .card
+  {
+    width:800px;
+    box-shadow: 0 0 4px rgba(40,44,63,0.08);
+    border: 1px solid #EAEAEC;
+    width: 700px;
+    height: 290px;
+    padding: 20px;
+    margin-left:;
+    line-height: 20px;
+   margin-top: 30px;
+  }
+  .silver
+  {
+    color: grey;
+  }
+  .plus
+  {
+   border-radius: 50%;
+   height: 40px;
+   width: 40px;
+   margin-left: 10px;
+  background-color: rgba(40,44,63,0.08);
+  padding: 13px 10px 10px 14px;
+  }
+  /* .plus:hover
+  {
+    color: black;
+    background-color: aqua;
+  } */
+  .details
+  {
+    display: none;
+  }
+  .plusDetails
+  {
+    background-color: white;
+    display: none;
+    width: 200px;
+    height: 300px;
+   position: absolute;
+   top: 49px;
+   right: 90px;
+  }
+  
+</style>
+
+</head>
+<body style="  font-family: whiteney;">
+    <div class="order">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-2">
+    
+            </div>
+            <div class="col-lg-8">
+              <div class="">
+                <b style="font-size:15px;">Account</b><br><small>Ajitha M</small>
+    
+              </div>
+              <hr>
+            </div>
+            <div class="col-lg-2">
+    
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-2">
+    
+            </div>
+            <div class="col-lg-2">
+              <div class="right">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action">Overview
+                    <hr></a>
+                  <a href="#" class="list-group-item list-group-item-action">Orders</a>
+                  <a href="#" class="list-group-item list-group-item-action"><b style="color: #14cda8;">Order & Returns</b>
+                    <hr></a>
+                  <a href="#" class="list-group-item list-group-item-action disabled">CRIDTS</a>
+                  <a href="#" class="list-group-item list-group-item-action">Coupons</a>
+                  <a href="#" class="list-group-item list-group-item-action">Myntra Credit</a>
+                  <a href="#" class="list-group-item list-group-item-action">Myntra Points
+                    <hr></a>
+                  <a href="#" class="list-group-item list-group-item-action">ACCOUNT</a>
+                  <a href="#" class="list-group-item list-group-item-action">Profile</a>
+                  <a href="#" class="list-group-item list-group-item-action">Saved Cards</a>
+                  <a href="#" class="list-group-item list-group-item-action">Addresses</a>
+                  <a href="#" class="list-group-item list-group-item-action"> Myntra Insider</a>
+    
+    
+                </div>
+    
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <button type="button" id="detailsButton" class="btn btn-primary btn-block oldOrder" name="button">Show my Old Orders</button>
+    
+            
+            <div class="card item" id="item">
+                <div class="card-text">
+                  <b style="color: #14cda8;">DELEVERED</b><b> Order No:133648658</b> <br>
+                  Placed on Sunday, january 23,2021/ Rs. 20,000 / 1 items
+                  <hr>
+                </div>
+                <div class="card-body">
+                  <b>Shipment 1 : 1 item | Delivered on Tuesday, january 27, 2021 <span style="float:right;"> <a id="priceDetails">View Details</a> </span> </b><br>
+                </div>
+                <img src="/Task 8/images/e14cfd70-8d09-487e-b742-ed70210f29641604137765740-panchhi-Women-Lehenga-Choli-3501604137763277-1.webp"  class="image-base-imgResponsive" alt="image">
+              </div>
+              
+              <div class="details">
+                <div class="card">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <small class="silver">SHIPMENT 1</small><br><b>Rs. 2,243.63</b>
+                    </div>
+                    <div class="col-lg-3">
+                      <small class="silver">STATUS</small><br> <b style="color: #14cda8;">DELEVERED</b>
+                    </div>
+                    <div class="col-lg-3">
+                      <small class="silver">ITEM</small><br><b>1</b>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <img src="/Task 8/images/e14cfd70-8d09-487e-b742-ed70210f29641604137765740-panchhi-Women-Lehenga-Choli-3501604137763277-1.webp" class="image-base-imgResponsive"
+                        alt="image">
+                    </div>
+                    <div class="col-lg-3">
+                      <b>Lehanga Choli</b><br>
+                      <small class="silver">Ladies Lehenga Choli <br>Sneakers <br>Size: 7/Qty:1 <br>Code:1207742<br> </small>
+                    </div>
+                    <div class="col-lg-3">
+                      <b>Rs.2,243.64
+                        <div class="glyphicon glyphicon-plus  plus" id="plus"></div> </b>
+                      <div class="plusDetails" id="plusDetails">
+                        <div class="card">
+    
+                          <div class="row">
+                            <div class="col-lg-6">
+                              Price Details
+                            </div>
+                            <div class="col-lg-6">
+    
+                            </div>
+                          </div><HR>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              Maximum Retail Price <br> (Incl. of all taxes)
+                            </div>
+                            <div class="col-lg-6">
+                              Rs. 699
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              Discount40% OFF
+                            </div>
+                            <div class="col-lg-6">
+    
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              Discounted Price
+                            </div>
+                            <div class="col-lg-6">
+                              Rs. 419
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              Tax <br>(charged at checkout)
+                            </div>
+                            <div class="col-lg-6">
+                              Rs. 21
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6">
+                              Total
+                            </div>
+                            <div class="col-lg-6">
+                              Rs. 439
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <p class="silver"> <span> <b style="color:orange;">Please note:</b> You Cannot return or exchange thisas the 30 day return Period has expired <b style="color:blue">(?)</b> </span> </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <p>Order No: 133618370</p>
+                      <p>Order Placed Sunday, August 21, 2020</p>
+                    </div>
+                    <hr>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-10">
+                      <p>Total Amount<br><b>Rs. 2,243.63</b></p>
+                    </div>
+                    <div class="col-lg-2">
+    
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-11">
+                      <b>Shopping Addresses:</b><br>
+                      <p>Ajitha M, Kalainager, Nagercoil-629002</p>
+                    </div>
+                    <div class="col-lg-1">
+                      <i class="glyphicon glyphicon-menu-right"></i>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-11">
+                      <p> <b>Payment Mode</b> <br>Online</p>
+                    </div>
+                    <div class="col-lg-1">
+                      <i class="glyphicon glyphicon-menu-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                function details()
+                 {
+                  document.getElementById("detailsButton").style.display="none";
+                    document.getElementById("item").style.display="block";
+                 }
+                 function priceDetails()
+                 {
+                   document.getElementById("detailsButton").style.display="none";
+                    document.getElementById("item").style.display="none";
+                    document.getElementClassName("details").style.display="block";
+                
+                 }
+                $(document).ready(function() {
+                  $("#detailsButton").click(function() {
+                    $("#detailsButton").hide();
+                    $("#item").show(700);
+                  });
+                  $("#priceDetails").click(function() {
+                    $("#detailsButton").hide();
+                    $("#item").hide(700);
+                    $(".details").show(700);
+                  });
+    
+                  $("#plus").mouseenter(function(){
+                    $("#plusDetails").show();
+                  });
+                  $("#plus").mouseleave(function(){
+                    $("#plusDetails").hide();
+                  });
+                });
+              </script>
+            </div>
+            <div class="col-lg-2">
+    
+            </div>
+          </div>
+        </div>
+      </div>
+      </body>
+      </html>
+    
+    

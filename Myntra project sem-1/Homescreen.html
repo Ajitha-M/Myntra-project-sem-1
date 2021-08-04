@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="image\myntra-icon.png">
+  <title>Orders</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="styleSheet" type="text/css" href="stylesheet\style.css">
+
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+</head>
+
+<body>
+
+
+  <header>
+
+    <div class="container-fluid headerContainer">
+      <img src="/Task12/imageS/myntra.png" alt="myntraLOGO" class="logo">
+
+      <nav class="navbar">
+        <div class="container-fluid ">
+          <ul class="nav navbar-nav rightNav">
+            <li class="dropdown"><a href="#" class="a-men">WATCHES</a>
+              
+            <li class="dropdown"><a href="#" class="a-women">MENS</a>
+             
+            <li class="dropdown"><a href="#" class="a-kids">WOMENS</a>
+             
+            <li class="dropdown"><a href="#" class="a-home">MOBILES</a>
+              
+            <li class="dropdown"><a href="#" class="a-discover">DISCOVER</a>
+              
+          </ul>
+
+      </nav>
+      <div class="input-group search">
+        <div class="input-group-btn">
+          <button class="btn search-button" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+          </div>
+           <input type="text" class="form-control" placeholder="Search" name="search" id="search" onclick=hover();>
+      </div>
+      <nav class="navbar">
+        <div class="container-fluid singup-button">
+          <ul class="nav navbar-nav leftNav">
+              <li>
+                <a href="#signupModal" data-toggle="modal">
+                <div class="btn btn-default button singup-button" >
+                 SIGN UP
+                </div></a>
+            </li>
+            <li>
+            <a href="#loginModal" data-toggle="modal">
+            <div class="btn btn-default button singup-button" >
+              LOG IN
+            </div></a>
+            </li>
+            <li>
+                <a href="#">
+                  <span><i class="fa fa-bookmark-o" style="font-size:20px"></i></span><br>
+                  </a>
+              </li>
+              <li>
+                <a href="cart.html">
+                  <span><i class="fa fa-shopping-cart" style="font-size:20px"></i></span><br>
+                  </a>
+              </li>
+            </ul>        
+        </nav>
+      </div>
+  
+  
+      <div id="signupModal" class="modal fade">
+        <div class="modal-dialog modal-login">
+          <div class="modal-content">
+            <form action="" method="post">
+              <div class="modal-header">				
+                <h4 class="modal-title">Sign up</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">				
+                <div class="form-group">
+                  <label>Email/Phone</label>
+                  <input type="text" class="form-control" placeholder="Enter your Email/Phone number" required="required">
+                </div>
+                <div class="form-group">
+                  <div class="clearfix">
+                    <label>Password</label>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Enter a password" required="required">
+                </div>
+                <div class="form-group">
+                  <div class="clearfix">
+                    <label> Confirm Password</label>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Confirm the password" required="required">
+                </div>
+              </div>
+              <div class="modal-footer justify-content-between">
+                <label class="form-check-label"><input type="checkbox"> Remember me</label>
+                <input type="submit" class="btn btn-primary" value="Login">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+  
+      <div id="loginModal" class="modal fade">
+        <div class="modal-dialog modal-login">
+          <div class="modal-content">
+            <form action="" method="post">
+              <div class="modal-header">				
+                <h4 class="modal-title">Login</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">				
+                <div class="form-group">
+                  <label>Email/Phone</label>
+                  <input type="text" class="form-control" placeholder="Enter your Email/Phone number" required="required">
+                </div>
+                <div class="form-group">
+                  <div class="clearfix">
+                    <label>Password</label>
+                    <a href="#" class="float-right text-muted"><small>Forgot?</small></a>
+                  </div>
+                  
+                  <input type="password" class="form-control" placeholder="Enter the password" required="required">
+                </div>
+              </div>
+              <div class="modal-footer justify-content-between">
+                <label class="form-check-label"><input type="checkbox"> Remember me</label>
+                <input type="submit" class="btn btn-primary" value="Login">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container-fluid">
+
+        <div id="myCarousel" class="carousel slide " data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+    
+      </ol>
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+    
+        <div class="item active">
+          <div class="item">
+      <img src="/Task12/images/c1.jpg" height="600p" srcset="">
+          </div>
+        </div>
+    
+          <div class="item">
+      <img src="/Task12/images/c2.jpg" srcset="">
+          </div>
+    
+          <div class="item">
+      <img src="/Task12/images/c3.jpg" srcset="">
+          </div>
+    
+          <div class="item">
+      <img src="/Task12/images/c4.jpg" srcset="">
+          </div>
+    
+          <div class="item">
+      <img src="/Task12/images/c5.jpg" srcset="">
+          </div>
+    
+    
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      </div>
+      </div>
+      <h1><b>TRENDING IN ACCESSORIES</h1>
+        <div class="container">
+            <div class="gallery">
+                <a href="Product filters.html">
+                <img src="/Task 5/Ajitha/images/images.jpg"></a>
+                <div class="desc">FASTRACK X ANANYA</div>
+            </div>
+            <div class="gallery">
+                <img src="/Task 5/Ajitha/images/images (9).jpg">
+                <div class="desc">SPACE ROVER WATCH</div>
+            </div>
+            <div class="gallery">
+                <img src="/Task 5/Ajitha/images/images (2).jpg">
+                <div class="desc">BUTTERFLY ANALOG WATCH</div>
+            </div>
+            <div class="gallery">
+                <img src="/Task 5/Ajitha/images/images (3).jpg">
+                <div class="desc">BLACK DIAL MULTIFUNCTION </div>
+            </div>
+            <div class="gallery">
+                <img src="/Task 5/Ajitha/images/images (4).jpg">
+                <div class="desc">BLACK LEATHER BAND QUARTZ</div>
+            </div>
+            <div class="gallery">
+                <img src="e:/Task 5/Ajitha/images/download.jpg">
+                <div class="desc">HELSINKI BLACK AND WITH</div>
+            </div>
+            <div class="gallery">
+                <img src="e:/Task 5/Ajitha/images/images (5).jpg">
+                <div class="desc">SPACE ODDITY FASTRACK</div>
+            </div>
+            <div class="gallery">
+                <img src="e:/Task 5/Ajitha/images/images (8).jpg">
+                <div class="desc">BLUE DIAL SILICONE STRAP </div>
+            </div>
+            <div class="gallery">
+                <img src="e:/Task 5/Ajitha/images/images (6).jpg">
+                <div class="desc">AELO ANALOG </div>
+            </div>
+            <div class="gallery">
+                <img src="e:/Task 5/Ajitha/images/images (7).jpg">
+                <div class="desc">CLASSIC SILICONE WATCH</div>
+            </div>
+        </div>
+        <br></br>
+        <footer class="footer">
+            <div class="container">
+                <div class="row ">
+                    <div class="footer-col">
+                        <h4>company name</h4>
+                        <ul>
+                        <li><a href="#">Oline help</a></li>
+                        <li><a href="#">customer services</a></li>
+                        <li><a href="#">shipping FAQ</a></li>
+                        <li><a href="#">service centres</a></li>
+                        <li><a href="#">warranty</a></li>
+                        <li><a href="#">bulk orders</a></li>
+                        <li><a href="#">user guide</a></li>
+                        <li><a href="#">laptop divers</a></li>
+                        <li><a href="#">mi exchanges</a></li>
+                        <li><a href="#">mi phone protection</a></li>
+                        <li><a href="#">mi extended warranty</a></li>
+                    </ul>    
+                </div>
+                <div class="footer-col">
+                    <h4>SHOP ND LEARN</h4>
+                    <ul>
+                        <li><a href="#">mi 10i/mi 10T series</a></li>
+                        <li><a href="#">redmi 8/redmi 9/redmi</a></li>
+                        <li><a href="#">9 prime</a></li>
+                        <li><a href="#">redmi 9i/redmi</a></li>
+                        <li><a href="#">9A/Redmi 8ADual</a></li>
+                        <li><a href="#">8 pro</a></li>
+                        <li><a href="#">pro</a></li>
+                        <li><a href="#">max</a></li>
+                        <li><a href="#">tvs/laptops</a></li>
+                        <li><a href="#">note 9</a></li>
+                    </ul>    
+                </div>
+                
+                <div class="footer-col">
+                    <h4>ABOUT US</h4>
+                    <ul>
+                        <li><a href="#">xiaomi</a></li>
+                        <li><a href="#">mediakit</a></li>
+                        <li><a href="#">culture</a></li>
+                        <li><a href="#">user agreement</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">deciarations</a></li>
+                        <li><a href="#">TV quality</a></li>
+                        <li><a href="#">service quality</a></li>
+                        <li><a href="#">environment</a></li>
+                        <li><a href="#">sitemap</a></li>
+                    </ul>    
+                </div>
+                <div class="footer-col">
+                    <h4>CONTACT US</h4>
+                    <ul>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+      
+        
